@@ -48,13 +48,13 @@ class playGame {
     userShots = 0;
     userHits = 0;
     userMisses = 0;
-    userTurnsLeft = 10;
+    userTurnsLeft = 80;
 
     CPUSinks = 0;
     CPUShots = 0;
     CPUHits = 0;
     CPUMisses = 0;
-    CPUTurnsLeft = 10;
+    CPUTurnsLeft = 80;
 
     startGame () {
         this.printShips(this.userBoard);

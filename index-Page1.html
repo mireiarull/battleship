@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Battleship</title>
+</head>
+<body>
+    <div class="instructions">
+        <p>Admiral<span id="userName"></span>, place your ships on the board...</p>
+    </div>
+
+    <div class="game-container">
+        <div class="battle-board">
+            <div class="row zero">
+                <div class="column" id="0-0"></div>
+                <div class="column" id="0-1">A</div>
+                <div class="column" id="0-2">B</div>
+                <div class="column" id="0-3">C</div>
+                <div class="column" id="0-4">D</div>
+                <div class="column" id="0-5">E</div>
+                <div class="column" id="0-6">F</div>
+                <div class="column" id="0-7">G</div>
+                <div class="column" id="0-8">H</div>
+                <div class="column" id="0-9">I</div>
+                <div class="column" id="0-10">J</div>
+                <div class="column" id="0-11"></div>
+            </div>
+            <div class="row one">
+                <div class="column" id="1-0">1</div>
+                <div class="column" id="1-1"></div>
+                <div class="column" id="1-2"></div>
+                <div class="column" id="1-3"></div>
+                <div class="column" id="1-4"></div>
+                <div class="column" id="1-5"></div>
+                <div class="column" id="1-6"></div>
+                <div class="column" id="1-7"></div>
+                <div class="column" id="1-8"></div>
+                <div class="column" id="1-9"></div>
+                <div class="column" id="1-10"></div>
+                <div class="column" id="1-11">1</div>
+            </div>
+            <div class="row two">
+                <div class="column" id="2-0">2</div>
+                <div class="column" id="2-1"></div>
+                <div class="column" id="2-2"></div>
+                <div class="column" id="2-3"></div>
+                <div class="column" id="2-4"></div>
+                <div class="column" id="2-5"></div>
+                <div class="column" id="2-6"></div>
+                <div class="column" id="2-7"></div>
+                <div class="column" id="2-8"></div>
+                <div class="column" id="2-9"></div>
+                <div class="column" id="2-10"></div>
+                <div class="column" id="2-11">2</div>
+            </div>
+            <div class="row three">
+                <div class="column" id="3-0">3</div>
+                <div class="column" id="3-1"></div>
+                <div class="column" id="3-2"></div>
+                <div class="column" id="3-3"></div>
+                <div class="column" id="3-4"></div>
+                <div class="column" id="3-5"></div>
+                <div class="column" id="3-6"></div>
+                <div class="column" id="3-7"></div>
+                <div class="column" id="3-8"></div>
+                <div class="column" id="3-9"></div>
+                <div class="column" id="3-10"></div>
+                <div class="column" id="3-11">3</div>
+            </div>
+            <div class="row four">
+                <div class="column" id="4-0">4</div>
+                <div class="column" id="4-1"></div>
+                <div class="column" id="4-2"></div>
+                <div class="column" id="4-3"></div>
+                <div class="column" id="4-4"></div>
+                <div class="column" id="4-5"></div>
+                <div class="column" id="4-6"></div>
+                <div class="column" id="4-7"></div>
+                <div class="column" id="4-8"></div>
+                <div class="column" id="4-9"></div>
+                <div class="column" id="4-10"></div>
+                <div class="column" id="4-11">4</div>
+            </div>
+            <div class="row five">
+                <div class="column" id="5-0">5</div>
+                <div class="column" id="5-1"></div>
+                <div class="column" id="5-2"></div>
+                <div class="column" id="5-3"></div>
+                <div class="column" id="5-4"></div>
+                <div class="column" id="5-5"></div>
+                <div class="column" id="5-6"></div>
+                <div class="column" id="5-7"></div>
+                <div class="column" id="5-8"></div>
+                <div class="column" id="5-9"></div>
+                <div class="column" id="5-10"></div>
+                <div class="column" id="5-11">5</div>
+            </div>
+            <div class="row six">
+                <div class="column" id="6-0">6</div>
+                <div class="column" id="6-1"></div>
+                <div class="column" id="6-2"></div>
+                <div class="column" id="6-3"></div>
+                <div class="column" id="6-4"></div>
+                <div class="column" id="6-5"></div>
+                <div class="column" id="6-6"></div>
+                <div class="column" id="6-7"></div>
+                <div class="column" id="6-8"></div>
+                <div class="column" id="6-9"></div>
+                <div class="column" id="6-10"></div>
+                <div class="column" id="6-11">6</div>
+            </div>
+            <div class="row seven">
+                <div class="column" id="7-0">7</div>
+                <div class="column" id="7-1"></div>
+                <div class="column" id="7-2"></div>
+                <div class="column" id="7-3"></div>
+                <div class="column" id="7-4"></div>
+                <div class="column" id="7-5"></div>
+                <div class="column" id="7-6"></div>
+                <div class="column" id="7-7"></div>
+                <div class="column" id="7-8"></div>
+                <div class="column" id="7-9"></div>
+                <div class="column" id="7-10"></div>
+                <div class="column" id="7-11">7</div>
+            </div>
+            <div class="row eigth">
+                <div class="column" id="8-0">8</div>
+                <div class="column" id="8-1"></div>
+                <div class="column" id="8-2"></div>
+                <div class="column" id="8-3"></div>
+                <div class="column" id="8-4"></div>
+                <div class="column" id="8-5"></div>
+                <div class="column" id="8-6"></div>
+                <div class="column" id="8-7"></div>
+                <div class="column" id="8-8"></div>
+                <div class="column" id="8-9"></div>
+                <div class="column" id="8-10"></div>
+                <div class="column" id="8-11">8</div>
+            </div>
+            <div class="row nine">
+                <div class="column" id="9-0">9</div>
+                <div class="column" id="9-1"></div>
+                <div class="column" id="9-2"></div>
+                <div class="column" id="9-3"></div>
+                <div class="column" id="9-4"></div>
+                <div class="column" id="9-5"></div>
+                <div class="column" id="9-6"></div>
+                <div class="column" id="9-7"></div>
+                <div class="column" id="9-8"></div>
+                <div class="column" id="9-9"></div>
+                <div class="column" id="9-10"></div>
+                <div class="column" id="9-11">9</div>
+            </div>
+            <div class="row ten">
+                <div class="column" id="10-0">10</div>
+                <div class="column" id="10-1"></div>
+                <div class="column" id="10-2"></div>
+                <div class="column" id="10-3"></div>
+                <div class="column" id="10-4"></div>
+                <div class="column" id="10-5"></div>
+                <div class="column" id="10-6"></div>
+                <div class="column" id="10-7"></div>
+                <div class="column" id="10-8"></div>
+                <div class="column" id="10-9"></div>
+                <div class="column" id="10-10"></div>
+                <div class="column" id="10-11">10</div>
+            </div>
+            <div class="row eleven">
+                <div class="column" id="11-0"></div>
+                <div class="column" id="11-1">A</div>
+                <div class="column" id="11-2">B</div>
+                <div class="column" id="11-3">C</div>
+                <div class="column" id="11-4">D</div>
+                <div class="column" id="11-5">E</div>
+                <div class="column" id="11-6">F</div>
+                <div class="column" id="11-7">G</div>
+                <div class="column" id="11-8">H</div>
+                <div class="column" id="11-9">I</div>
+                <div class="column" id="11-10">J</div>
+                <div class="column" id="11-11"></div>
+                </div>
+        </div>
+
+        <div class="pieces-container">
+        
+            <div class="position-buttons-container">
+                <button class="position right clicked" id="buttonRight">&#5125</button>
+                <button class="position down" id="buttonDown">&#5121</button>
+                <button class="position clear" id="buttonClear">Clear</button>
+            </div>
+
+
+            <div class="pieces">
+                <div class="pieces-row1">
+                    <div class="ship two-holes" id="ship-1">
+                        <span class="ship-name">Destroyer</span>
+                        <div class="piece ship-2" id="piece-ship-1"></div>                
+                    </div>
+                    <div class="ship three-holes" id="ship-2">
+                        <span class="ship-name">Submarine</span>
+                        <div class="piece ship-3" id="piece-ship-2"></div>
+                    </div>
+                    <div class="ship three-holes" id="ship-3">
+                        <span class="ship-name">Cruiser</span>
+                        <div class="piece ship-3" id="piece-ship-3"></div>
+                    </div>
+                </div>
+                <div class="pieces-row2">
+                    <div class="ship four-holes" id="ship-4">
+                        <span class="ship-name">Battleship</span>
+                        <div class="piece ship-4" id="piece-ship-4"></div>
+                    </div>
+                    <div class="ship five-holes" id="ship-5">
+                        <span class="ship-name">Carrier</span>
+                        <div class="piece ship-5" id="piece-ship-5"></div>
+                    </div>
+                </div>
+            </div>
+
+            <button class="start-button" id="startBattleButton">START-BATTLE</button>
+        </div>
+         
+    </div>
+
+    <script src="/main-Page1.js"></script>
+</body>
+</html>

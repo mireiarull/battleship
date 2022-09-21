@@ -155,18 +155,20 @@ class shipsBoard {
     
     clearBoard () {
         this.board = [];
+
         for (let i = 0; i<10; i++){
             this.board.push([]);
             for (let j = 0; j<10; j++){
                 this.board[i].push("");
             }
         }
-        this.printBoard();
 
         for (let i=1; i<6; i++){
-            document.querySelector("#piece-ship-"+ i).style.border = "3px solid rgb(85,85,255)";
-            document.querySelector("#piece-ship-"+ i).style.backgroundColor = "rgb(167, 167, 167)";
+            document.getElementById("piece-ship-"+ i).classList.remove("placed");
+            document.getElementById("piece-ship-"+ i).style.border = "3px solid rgb(85,85,255)";
         }
+        
+        this.printBoard();
     }
 
     addShiptoArray (board) { 
